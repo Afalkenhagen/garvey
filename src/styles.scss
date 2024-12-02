@@ -1,14 +1,11 @@
+@use 'tailwindcss/base';
+@use 'tailwindcss/components';
+@use 'tailwindcss/utilities';
+@use '/home/ahau/Documentos/Developer/garvey/garvey/node_modules/normalize.scss/normalize.scss';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
-@import '/home/ahau/Documentos/Developer/garvey/garvey/node_modules/normalize.scss/normalize.scss';
-//@import '~normalize.scss/normalize';
-//@include normalize();
 
 body {
     scroll-behavior: smooth;
