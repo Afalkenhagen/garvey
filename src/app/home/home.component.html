@@ -1,4 +1,26 @@
 <!-- aqui va el carrousel -->
+<div class="relative w-full overflow-hidden">
+    <div class="flex transition-transform duration-500" [ngStyle]="{'transform': 'translateX(-' + (currentSlide * 100) + '%)'}">
+      <div *ngFor="let slide of slides" class="min-w-full relative">
+        <img class="w-full" [src]="slide.image" alt="Image">
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="text-center text-black">
+            <p class="text-lg font-medium text-primary uppercase">{{ slide.caption }}</p>
+            <h1 class="text-4xl font-bold mb-5">{{ slide.title }}</h1>
+            <a href="#" class="bg-[#2E3191] text-white py-3 px-5 rounded">Quiero saber más   </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button (click)="prevSlide()" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-[#2E3191] text-white p-2 rounded-full">
+      &#10094; <!-- Icono de flecha izquierda -->
+    </button>
+    <button (click)="nextSlide()" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-[#2E3191] text-white p-2 rounded-full">
+      &#10095; <!-- Icono de flecha derecha -->
+    </button>
+  </div>
+  
 <p>hola desde Home!</p>
+
 
 <app-footer></app-footer>
