@@ -5,17 +5,17 @@
         <img class="w-full" [src]="slide.image" alt="Image">
         <div class="absolute inset-0 flex items-center justify-center">
           <div class="text-center text-black p-4 g-black bg-opacity-50">
-            <p class="text-lg font-medium text-primary uppercase mb-2">{{ slide.caption }}</p>
-            <h1 class="text-4xl font-bold mb-5">{{ slide.title }}</h1>
-            <a href="#" class="bg-[#2E3191] text-white py-3 px-5 rounded">Quiero saber más   </a>
+            <p class="text-xl font-medium text-primary uppercase mb-4" [ngClass]="{'fade-in': fadeIn, 'fade-out': !fadeIn}">{{ slide.caption }}</p>
+            <h1 class="text-custom leading-custom font-bold mb-12" [ngClass]="{'fade-in': fadeIn, 'fade-out': !fadeIn}">{{ slide.title }}</h1>
+            <a href="#" class="bg-[#2E3191] text-white py-3 px-5 rounded ">Quiero saber más</a>
           </div>
         </div>
       </div>
     </div>
-    <button (click)="prevSlide()" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-[#2E3191] text-white p-2 rounded-full z-10">
+    <button (click)="prevSlide()" class="absolute top-1/2 left-5 transform -translate-y-1/2 bg-[#2E3191] text-white p-4 rounded-full opacity-50 md:opacity-100 hover:opacity-75 transition-opacity duration-300 z-10">
       &#10094; <!-- Icono de flecha izquierda -->
     </button>
-    <button (click)="nextSlide()" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-[#2E3191] text-white p-2 rounded-full z-10">
+    <button (click)="nextSlide()" class="absolute top-1/2 right-5 transform -translate-y-1/2 bg-[#2E3191] text-white p-4 rounded-full opacity-50 md:opacity-100 hover:opacity-75 transition-opacity duration-300 z-10">
       &#10095; <!-- Icono de flecha derecha -->
     </button>
   </div>
