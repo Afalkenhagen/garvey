@@ -1,4 +1,8 @@
 #navbar {
-    transition: transform 0.3s ease-in-out;
-    z-index: 50; 
-  }
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  z-index: 50; /* Asegúrate de que la navbar tenga un z-index alto */
+}
+
+.bg-opacity-75 {
+  background-color: rgba(46, 49, 145, 0.75); /* Ajusta el color y la opacidad según sea necesario */
+}

@@ -26,6 +26,11 @@ export class NavbarComponent {
         navbar.classList.remove('-translate-y-full');
         navbar.classList.add('translate-y-0');
       }
+      if (scrollTop > 0) {
+        navbar.classList.add('bg-opacity-75');
+      } else {
+        navbar.classList.remove('bg-opacity-75');
+      }
       this.lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
     }
   }
