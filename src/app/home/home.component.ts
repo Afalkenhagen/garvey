@@ -2,10 +2,11 @@ import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID  } from '@angular/cor
 import { FooterComponent } from '../footer/footer.component';
 import { CommonModule } from '@angular/common';
 import { isPlatformBrowser } from '@angular/common';
+import { NgOptimizedImage } from '@angular/common'
 
 @Component({
   selector: 'app-home',
-  imports: [FooterComponent, CommonModule],
+  imports: [FooterComponent, CommonModule,NgOptimizedImage],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
