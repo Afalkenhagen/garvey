@@ -1,6 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { NgIf } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 import { NavbarComponent } from './navbar/navbar.component';
 
