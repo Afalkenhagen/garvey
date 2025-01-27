@@ -2,8 +2,9 @@ import { Component, HostListener } from '@angular/core';
 import { NgIf } from '@angular/common';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
-import { FooterComponent } from './footer/footer.component';
+
 import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
   selector: 'app-root',
