@@ -1,12 +1,13 @@
 import { Component, HostListener } from '@angular/core';
 import { NgIf } from '@angular/common';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { FooterComponent } from '../footer/footer.component';
 
 import { NavbarComponent } from './navbar/navbar.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavbarComponent, NgIf],
+  imports: [RouterOutlet, NavbarComponent, NgIf, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
