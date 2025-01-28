@@ -1,23 +1,23 @@
-@media (max-width: 768px) {
-    .carousel-button {
-      padding: 1rem; /* Aumentar el padding para que sean más grandes */
-      font-size: 1.5rem; /* Aumentar el tamaño de la fuente */
-    }
+// @media (max-width: 768px) {
+//     .carousel-button {
+//       padding: 1rem; /* Aumentar el padding para que sean más grandes */
+//       font-size: 1.5rem; /* Aumentar el tamaño de la fuente */
+//     }
   
-    .carousel-caption {
-      padding-bottom: 4rem; /* Asegúrate de que haya suficiente espacio en la parte inferior */
-    }
-  }
-  .carousel-button {
-    z-index: 10; /* Asegúrate de que los botones estén por encima del texto */
-  }
+//     .carousel-caption {
+//       padding-bottom: 4rem; /* Asegúrate de que haya suficiente espacio en la parte inferior */
+//     }
+//   }
+//   .carousel-button {
+//     z-index: 10; /* Asegúrate de que los botones estén por encima del texto */
+//   }
 
-  .fade-in {
-    opacity: 1;
-    transition: opacity 0.5s ease-in;
-  }
+//   .fade-in {
+//     opacity: 1;
+//     transition: opacity 0.5s ease-in;
+//   }
   
-  .fade-out {
-    opacity: 0;
-    transition: opacity 0.5s ease-out;
-  }
+//   .fade-out {
+//     opacity: 0;
+//     transition: opacity 0.5s ease-out;
+//   }

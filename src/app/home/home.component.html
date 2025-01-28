@@ -1,10 +1,10 @@
 <!-- aqui va el carrousel -->
-<section aria-label="Carrusel principal" class="relative w-full overflow-hidden">
+<section aria-label="Carrusel principal" class="relative w-full overflow-hidden ">
     <div class="flex transition-transform duration-500" [ngStyle]="{'transform': 'translateX(-' + (currentSlide * 100) + '%)'}">
       <div *ngFor="let slide of slides" class="min-w-full relative">
         <img class="w-full" [ngSrc]="slide.image" alt="Image" width="400" height="200" priority>
         <div class="absolute inset-0 flex items-center justify-center">
-          <div class="text-center text-black p-4 g-black bg-opacity-50">
+          <div class="text-center text-black p-2 bg-opacity-50">
             <p class="text-xl font-medium text-primary uppercase mb-4" [ngClass]="{'fade-in': fadeIn, 'fade-out': !fadeIn}">{{ slide.caption }}</p>
             <h1 class="text-custom leading-custom font-bold mb-12" [ngClass]="{'fade-in': fadeIn, 'fade-out': !fadeIn}">{{ slide.title }}</h1>
             <a routerLink="/nosotros" routerLinkActive="active" ariaCurrentWhenActive="page" class="bg-[#2E3191] text-white py-3 px-5 rounded ">Quiero saber más</a>

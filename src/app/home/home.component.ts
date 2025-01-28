@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit, OnDestroy{
     {
       image: '/carousel-2.jpg',
       caption: 'Siempre ampliando los horizontes',
-      title: 'La mejor solución confiable para la industria',
+      title: 'Soluciones confiables para la industria',
     }
   ];
 
