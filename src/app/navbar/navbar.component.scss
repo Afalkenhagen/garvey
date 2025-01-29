@@ -3,7 +3,15 @@
   z-index: 50; /* Asegúrate de que la navbar tenga un z-index alto */
 }
 
+.menu-button {
+  margin-left: auto; /* Asegúrate de que el botón hamburguesa tenga margen a la izquierda */
+}
+
 .bg-opacity-75 {
   background-color: rgba(46, 49, 145, 0.75); /* Ajusta el color y la opacidad según sea necesario */
+}
+
+.mobile-menu {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 

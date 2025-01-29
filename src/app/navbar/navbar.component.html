@@ -1,4 +1,37 @@
-<nav id="navbar" class="bg-[#2E3191] p-4 fixed top-0 left-0 w-full transform transition-transform duration-300 translate-y-0 z-50">
+<!-- <nav id="navbar" class="bg-[#2E3191] p-4 fixed top-0 left-0 w-full transform transition-transform duration-300 translate-y-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="text-white text-xl font-bold">GARVEY</div>
+      
+      <div class="md:hidden ml-auto">
+        <button (click)="toggleMenu($event)" class="text-white focus:outline-none menu-button">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+
+      
+      <div class="hidden md:flex space-x-4">
+        <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page" class="text-white hover:bg-blue-700 px-3 py-2 rounded">Inicio</a>
+        <a routerLink="/nosotros" routerLinkActive="active" ariaCurrentWhenActive="page" class="text-white hover:bg-blue-700 px-3 py-2 rounded">Nosotros</a>
+        <a routerLink="/productos" routerLinkActive="active" ariaCurrentWhenActive="page" class="text-white hover:bg-blue-700 px-3 py-2 rounded">Productos</a>
+        <a routerLink="/contacto" routerLinkActive="active" ariaCurrentWhenActive="page" class="text-white hover:bg-blue-700 px-3 py-2 rounded">Contacto</a>
+      </div>
+
+      
+      <div 
+      [ngClass]="{'translate-y-0 opacity-100': isMenuOpen, '-translate-y-full opacity-0': !isMenuOpen}" 
+      class="top-16 left-0 w-full bg-[#2E3191] flex flex-col items-center md:hidden transition-transform duration-300 ease-in-out mobile-menu">
+        <a (click)="closeMenu()" routerLink="/" class="block text-white hover:bg-blue-700 px-3 py-2 rounded w-full text-center">Inicio</a>
+        <a (click)="closeMenu()" routerLink="/nosotros" class="block text-white hover:bg-blue-700 px-3 py-2 rounded w-full text-center">Nosotros</a>
+        <a (click)="closeMenu()" routerLink="/productos" class="block text-white hover:bg-blue-700 px-3 py-2 rounded w-full text-center">Productos</a>
+        <a (click)="closeMenu()" routerLink="/contacto" class="block text-white hover:bg-blue-700 px-3 py-2 rounded w-full text-center">Contacto</a>
+      </div>
+    </div>
+</nav> -->
+
+<!-- 
+ <nav id="navbar" class="bg-[#2E3191] p-4 fixed top-0 left-0 w-full transform transition-transform duration-300 translate-y-0 z-50">
     <div class="container mx-auto flex justify-between items-center">
       <div class="text-white text-xl font-bold">
         GARVEY
@@ -24,5 +57,38 @@
       <a routerLink="/contacto" routerLinkActive="active" ariaCurrentWhenActive="page" class="block text-white hover:bg-blue-700 px-3 py-2 rounded">Contacto</a>
     </div>
   </nav>
-  
-  
+  -->
+
+<nav id="navbar" class="bg-[#2E3191] p-4 fixed top-0 left-0 w-full transform transition-transform duration-300 translate-y-0 z-50">
+  <div class="container mx-auto flex justify-between items-center">
+    <div class="text-white text-xl font-bold">
+      <a routerLink="/" class="text-white text-xl font-bold hover:opacity-80 transition-opacity">
+        GARVEY
+      </a>
+    </div>
+    <!-- Botón hamburguesa -->
+    <div class="md:hidden ml-auto">
+      <button (click)="toggleMenu()" class="text-white focus:outline-none menu-button">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Menú de escritorio -->
+    <div class="hidden md:flex space-x-4">
+      <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page" class="text-white hover:bg-blue-700 px-3 py-2 rounded">Inicio</a>
+      <a routerLink="/nosotros" routerLinkActive="active" ariaCurrentWhenActive="page" class="text-white hover:bg-blue-700 px-3 py-2 rounded">Nosotros</a>
+      <a routerLink="/productos" routerLinkActive="active" ariaCurrentWhenActive="page" class="text-white hover:bg-blue-700 px-3 py-2 rounded">Productos</a>
+      <a routerLink="/contacto" routerLinkActive="active" ariaCurrentWhenActive="page" class="text-white hover:bg-blue-700 px-3 py-2 rounded">Contacto</a>
+    </div>
+  </div>
+
+  <!-- Menú desplegable en móvil -->
+  <div *ngIf="isMenuOpen" class="md:hidden mt-4 space-y-2 transition-all duration-500 ease-in-out mobile-menu">
+    <a routerLink="/" class="block text-white hover:bg-blue-700 px-3 py-2 rounded w-full text-center">Inicio</a>
+    <a routerLink="/nosotros" class="block text-white hover:bg-blue-700 px-3 py-2 rounded w-full text-center">Nosotros</a>
+    <a routerLink="/productos" class="block text-white hover:bg-blue-700 px-3 py-2 rounded w-full text-center">Productos</a>
+    <a routerLink="/contacto" class="block text-white hover:bg-blue-700 px-3 py-2 rounded w-full text-center">Contacto</a>
+  </div>
+</nav>
