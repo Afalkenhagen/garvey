@@ -17,8 +17,6 @@ import { LoadingScreenComponent } from './loading-screen/loading-screen.componen
 })
 export class AppComponent {
   title = 'garvey';
-
-
   isMenuScrolled = false;
   isSidebarShowing = false;
 
@@ -40,15 +38,24 @@ export class AppComponent {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
   }
 
+  // Variables de Loader entre rutas
   isLoading = false;
+  private firstLoad = true; // Nueva variable para detectar la primera carga
 
   constructor(private router: Router) {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationStart) {
+        // Si es la primera carga y estamos en la página de inicio, no mostrar el Loader
+        if (this.firstLoad && (this.router.url === '/' || this.router.url === '/home')) {
+          this.firstLoad = false; // Marcar que ya pasó la primera carga
+          return;
+        }
         this.isLoading = true;
       }
+
       if (event instanceof NavigationEnd || event instanceof NavigationCancel || event instanceof NavigationError) {
-        setTimeout(() => this.isLoading = false, 500); // Agrega un pequeño delay para suavizar la transición
+        this.firstLoad = false; // Marcar que ya no es la primera carga
+        setTimeout(() => this.isLoading = false, 500);
       }
     });
   }
