@@ -27,5 +27,133 @@
       </div>
     </div>
   </section>
+  <!-- About Start -->
+  <!-- <section>
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-6">
+            <div class="row gx-3 h-100">
+              <div class="col-6 align-self-start">
+                <img class="img-fluid" ngSrc="about-1.jpg" width="400" height="200">
+              </div>
+              <div class="col-6 align-self-end">
+                <img class="img-fluid" ngSrc="about-2.jpg" width="400" height="200">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <p class="fw-medium text-uppercase text-primary mb-2">About Us</p>
+            <h1 class="display-5 mb-4">We Are Leader In Industrial Market</h1>
+            <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos.</p>
+            <div class="d-flex align-items-center mb-4">
+              <div class="flex-shrink-0 bg-primary p-4">
+                <h1 class="display-2">{{ experienceYears }}</h1>
+                <h5 class="text-white">Years of</h5>
+                <h5 class="text-white">Experience</h5>
+              </div>
+              <div class="ms-4">
+                <p *ngFor="let service of services">
+                  <i class="fa fa-check text-primary me-2"></i>{{ service }}
+                </p>
+              </div>
+            </div>
+            <div class="row pt-2">
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center">
+                  <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                    <i class="fa fa-envelope-open text-white"></i>
+                  </div>
+                  <div class="ms-3">
+                    <p class="mb-2">Email us</p>
+                    <h5 class="mb-0">{{ contactEmail }}</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center">
+                  <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                    <i class="fa fa-phone-alt text-white"></i>
+                  </div>
+                  <div class="ms-3">
+                    <p class="mb-2">Call us</p>
+                    <h5 class="mb-0">{{ contactPhone }}</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <div class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col lg:flex-row gap-10">
+        <!-- Sección de Imágenes -->
+        <div class="lg:w-1/2 flex flex-col justify-between h-full">
+          <div class="grid grid-cols-2 gap-4 h-full">
+            <div class="flex">
+              <img 
+                ngSrc="about-1.jpg" 
+                alt="About Image 1" 
+                class="w-full h-full object-cover rounded-lg shadow-md" 
+                width="200" height="400">
+            </div>
+            <div class="flex">
+              <img 
+                ngSrc="about-2.jpg" 
+                alt="About Image 2" 
+                class="w-full h-full object-cover rounded-lg shadow-md" 
+                width="200" height="400">
+            </div>
+          </div>
+        </div>
+  
+        <!-- Sección de Texto -->
+        <div class="lg:w-1/2 flex flex-col justify-between">
+          <div>
+            <p class="uppercase text-primary font-semibold mb-2">About Us</p>
+            <h1 class="text-4xl font-bold mb-4">We Are Leader In Industrial Market</h1>
+            <p class="mb-6">
+              Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. 
+              Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet.
+            </p>
+          </div>
+          <div class="flex items-center mb-6 gap-4">
+            <div class="bg-primary text-gray-900 p-6 rounded-lg text-center bg-[#FEC906]">
+              <h1 class="text-5xl font-bold">{{ experienceYears }}</h1>
+              <div class="text-sm">Years of<br>Experience</div>
+            </div>
+            <div class="space-y-2">
+              <div *ngFor="let service of services" class="flex items-center gap-2">
+                <mat-icon class="text-primary">check</mat-icon>
+                <span class="text-base">{{ service }}</span>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="flex items-center gap-3 bg-primary p-3 rounded-lg text-gray-900">
+              <mat-icon>mail_outline</mat-icon>
+              <div>
+                <p class="text-sm">Email us</p>
+                <h5 class="font-semibold">{{ contactEmail }}</h5>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 bg-primary p-3 rounded-lg text-gray-900">
+              <mat-icon>phone</mat-icon>
+              <div>
+                <p class="text-sm">Call us</p>
+                <h5 class="font-semibold">{{ contactPhone }}</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- About End -->
   <noscript>This is the about us component</noscript>
   <app-facts></app-facts>

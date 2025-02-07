@@ -1,19 +1,20 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, AfterViewInit, ViewChildren, QueryList, PLATFORM_ID, Inject} from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-facts',
-  imports: [CommonModule],
+  imports: [CommonModule, MatIconModule],
   templateUrl: './facts.component.html',
   styleUrl: './facts.component.scss'
 })
 export class FactsComponent implements AfterViewInit {
   facts = [
-    { icon: 'fa-certificate', number: 25, text: 'Años de experiencia' },
-    { icon: 'fa-users-cog', number: 34, text: 'Certificaciones' },
-    { icon: 'fa-users', number: 1957, text: 'Clientes satisfechos' },
-    { icon: 'fa-check-double', number: 1839, text: 'Productos elaborados' }
+    { icon: 'verified', number: 25, text: 'Años de experiencia' },
+    { icon: 'group', number: 34, text: 'Certificaciones' },
+    { icon: 'emoji_people', number: 1957, text: 'Clientes satisfechos' },
+    { icon: 'check_circle', number: 1839, text: 'Productos elaborados' }
   ];
 
   @ViewChildren('counter') counters!: QueryList<ElementRef>;
