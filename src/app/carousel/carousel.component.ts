@@ -13,12 +13,12 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 export class CarouselComponent implements OnInit, OnDestroy{
   slides = [
       {
-        image: '/carousel-1.jpg',
+        image: '/carousel-1.webp',
         caption: '25 años de solida experiencia',
         title: 'Proveedores de soluciones industriales',
       },
       {
-        image: '/carousel-2.jpg',
+        image: '/carousel-2.webp',
         caption: 'Siempre ampliando los horizontes',
         title: 'Soluciones confiables para la industria',
       }
