@@ -1,46 +1,49 @@
 <!-- Page Header Start -->
-<div class="bg-gray-900 text-white py-20">
-  <div class="container mx-auto px-4 text-center">
-    <h1 class="text-5xl font-bold mb-4 animate-slide-in-right">About Us</h1>
-    <nav aria-label="breadcrumb">
-      <ul class="flex justify-center space-x-2 text-gray-400 animate-slide-in-right">
-        <li><a href="/" class="hover:text-white">Home</a></li>
-        <span>/</span>
-        <li><a href="#" class="hover:text-white">Pages</a></li>
-        <span>/</span>
-        <li class="text-white">About Us</li>
-      </ul>
-    </nav>
-  </div>
-</div>
-
+ <article>
+  <header>
+    <div class="relative py-20 mb-5">
+      <!-- Video de fondo -->
+      <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
+        <source src="fabrica_garvey.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      
+      <!-- Overlay oscuro para mejorar la legibilidad -->
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    
+      <div class="relative container mx-auto px-4 text-center text-[#FEC906]">
+        <h1 class="text-5xl font-bold mb-4 animate-fadeIn">Nosotros</h1>
+        <nav aria-label="breadcrumb" class="animate-fadeIn delay-200">
+          <ol class="flex justify-center space-x-2 text-lg">
+            <li><a routerLink="/" class="hover:underline hover:bg-blue-700 hover:bg-opacity-50 px-1 py-1 rounded w-full">Inicio</a></li>
+            <li>/</li>
+            <li class="">Sección</li>
+            <li>/</li>
+            <li><a routerLink="/nosotros" class="hover:underline hover:bg-blue-700 hover:bg-opacity-50 px-1 py-1 rounded w-full">Nosotros</a></li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    
+  </header>
+ </article>
 <!-- Page Header End -->
+
 <section class="text-gray-600 body-font">
     <div class="container px-5 py-24 mx-auto flex flex-wrap">
       <div class="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-1/2 sm:w-2/3 content-start sm:pr-10">
         <div class="w-full sm:p-4 px-4 mb-6">
-          <h1 class="title-font font-medium text-xl mb-2 text-gray-900">Moon hashtag pop-up try-hard offal truffaut</h1>
-          <div class="leading-relaxed">Pour-over craft beer pug drinking vinegar live-edge gastropub, keytar neutra sustainable fingerstache kickstarter.</div>
-        </div>
-        <div class="p-4 sm:w-1/2 lg:w-1/4 w-1/2">
-          <h2 class="title-font font-medium text-3xl text-gray-900">2.7K</h2>
-          <p class="leading-relaxed">Users</p>
-        </div>
-        <div class="p-4 sm:w-1/2 lg:w-1/4 w-1/2">
-          <h2 class="title-font font-medium text-3xl text-gray-900">1.8K</h2>
-          <p class="leading-relaxed">Subscribes</p>
-        </div>
-        <div class="p-4 sm:w-1/2 lg:w-1/4 w-1/2">
-          <h2 class="title-font font-medium text-3xl text-gray-900">35</h2>
-          <p class="leading-relaxed">Downloads</p>
-        </div>
-        <div class="p-4 sm:w-1/2 lg:w-1/4 w-1/2">
-          <h2 class="title-font font-medium text-3xl text-gray-900">4</h2>
-          <p class="leading-relaxed">Products</p>
+          <h1 class="title-font font-medium text-2xl mb-2 text-gray-900">Nuestra historia</h1>
+          <div class="leading-relaxed">En <strong>MDQ QUÍMICA GARVEY S.A.</strong>, nos especializamos en la elaboración, distribución y asesoramiento técnico de productos químicos y de laboratorio para diversas industrias, incluyendo la alimenticia, pesquera, metalúrgica, farmacéutica, energética, veterinaria e higiene institucional.
+            <br>
+            Nuestra historia comienza en 1998 como una sociedad de hecho, con el propósito de atender una creciente demanda en la Ciudad de Buenos Aires y la provincia de Buenos Aires, expandiéndonos progresivamente a la región de Mar y Sierra. En el año 2000, consolidamos nuestro crecimiento transformándonos en Sociedad Anónima, y en 2001 dimos un paso estratégico al obtener un terreno en el Parque Industrial General Savio para la construcción de nuestra planta modelo.
+            <br>
+            A lo largo de más de dos décadas, hemos superado desafíos y seguimos fortaleciendo nuestra presencia en el mercado. Contamos con la distribución exclusiva de diversas empresas del rubro, abarcando el sur del país, la región del Noroeste Argentino y el sudeste de la provincia de Buenos Aires.
+          </div>
         </div>
       </div>
       <div class="lg:w-1/2 sm:w-1/3 w-full rounded-lg overflow-hidden mt-6 sm:mt-0">
-        <img class="object-cover object-center w-full h-full" src="https://dummyimage.com/600x300" alt="stats">
+        <img class="object-cover object-center w-full h-full" ngSrc="fabrica_garvey_2.webp" alt="fabrica garvey" width="400" height="200">
       </div>
     </div>
   </section>
@@ -52,35 +55,26 @@
         <div class="lg:w-1/2 flex flex-col justify-between h-full">
           <div class="grid grid-cols-2 gap-4 h-full">
             <div class="flex">
-              <img 
-                ngSrc="about-1.webp" 
-                alt="About Image 1" 
-                class="w-full h-full object-cover rounded-lg shadow-md" 
-                width="200" height="400">
+              <img ngSrc="about-1.webp" alt="About Image 1" class="w-full h-full object-cover rounded-lg shadow-md" width="200" height="400">
             </div>
             <div class="flex">
-              <img 
-                ngSrc="about-2.webp" 
-                alt="About Image 2" 
-                class="w-full h-full object-cover rounded-lg shadow-md" 
-                width="200" height="400">
+              <img ngSrc="about-2.webp" alt="About Image 2" class="w-full h-full object-cover rounded-lg shadow-md" width="200" height="400">
             </div>
           </div>
         </div>
         <!-- Sección de Texto -->
         <div class="lg:w-1/2 flex flex-col justify-between">
           <div>
-            <p class="uppercase text-primary font-semibold mb-2">About Us</p>
-            <h1 class="text-4xl font-bold mb-4">We Are Leader In Industrial Market</h1>
+            <p class="uppercase text-primary font-semibold mb-2">Sobre Nosotros</p>
+            <h1 class="text-4xl font-bold mb-4">Somos referentes en el mercado industrial</h1>
             <p class="mb-6">
-              Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. 
-              Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet.
+              Nuestro compromiso es claro: crecer, innovar y ofrecer a nuestros clientes la más alta calidad y un servicio integral, manteniendo siempre la excelencia que nos caracteriza desde nuestros inicios en las siguientes áreas.
             </p>
           </div>
           <div class="flex items-center mb-6 gap-4">
             <div class="bg-primary text-gray-900 p-6 rounded-lg text-center bg-[#FEC906]">
               <h1 class="text-5xl font-bold">{{ experienceYears }}</h1>
-              <div class="text-sm">Years of<br>Experience</div>
+              <div class="text-sm">Años de<br>Experiencia</div>
             </div>
             <div class="space-y-2">
               <div *ngFor="let service of services" class="flex items-center gap-2">

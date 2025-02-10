@@ -12,12 +12,12 @@ import { MatIconModule } from '@angular/material/icon';
 export class NosotrosComponent {
   experienceYears: number = 25;
   contactEmail: string = 'info@quimicagarvey.com.ar';
-  contactPhone: string = '+012 345 6789';
+  contactPhone: string = '+54-223-616-9922';
   services: string[] = [
-    'Power & Energy',
-    'Civil Engineering',
-    'Chemical Engineering',
-    'Mechanical Engineering',
-    'Oil & Gas Engineering'
+    'Industria Alimentaria y Pesquera',
+    'Sector Metalúrgico e Industrial',
+    'Industria Farmacéutica y Veterinaria',
+    'Energía y Medio Ambiente',
+    'Higiene Institucional y Mantenimiento'
   ];
 }
