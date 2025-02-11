@@ -1,0 +1,57 @@
+<!-- Feature Start -->
+<section>
+    <div class="py-20">
+        <div class="container mx-auto px-4">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <!-- Sección de Imagen y Video -->
+            <div class="relative">
+              <img 
+                ngSrc="feature.jpg"  
+                alt="Feature Image" 
+                class="w-full h-auto object-cover rounded-lg shadow-md" 
+                width="600" height="400">
+              <button 
+                (click)="openVideoDialog('https://www.youtube.com/embed/D0UnqGm_miA?si=XOWgnGdIZr5AiZX1')" 
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-primary p-4 rounded-full shadow-lg hover:scale-110 transition">
+                <mat-icon class="text-black text-3xl">play_arrow</mat-icon>
+              </button>
+            </div>
+            
+            <!-- Sección de Texto -->
+            <div>
+              <p class="uppercase text-primary font-semibold mb-2">¿Por qué elegirnos?</p>
+              <h1 class="text-4xl font-bold mb-4">¡Algunas razones por las que la gente nos elige!</h1>
+              <p class="mb-6">
+                A lo largo de más de dos décadas, hemos superado desafíos y seguimos fortaleciendo nuestra presencia en el mercado mediante la constante capacitación profesional y tecnológica.
+              </p>
+              
+              <div class="space-y-4">
+                <div *ngFor="let reason of reasons" class="flex items-start gap-4 animate-fadeIn">
+                  <div class="bg-primary p-3 rounded-full shadow-lg">
+                    <mat-icon class="text-blue-500">{{ reason.icon }}</mat-icon>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-lg">{{ reason.title }}</h4>
+                    <p class="text-sm">{{ reason.description }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video Modal -->
+      <!-- <ng-template #videoDialog>
+        <mat-dialog-content>
+          <div class="relative pb-16/9 h-0 overflow-hidden rounded-lg">
+            <iframe 
+              [src]="videoUrl | safe" 
+              class="absolute top-0 left-0 w-full h-full" 
+              frameborder="0" 
+              allowfullscreen></iframe>
+          </div>
+        </mat-dialog-content>
+      </ng-template> -->
+</section>
+<!-- Feature end -->

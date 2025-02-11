@@ -1,0 +1,57 @@
+<!-- About Start -->
+<section class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col lg:flex-row gap-10">
+        <!-- Sección de Imágenes -->
+        <div class="lg:w-1/2 flex flex-col justify-between h-full">
+          <div class="grid grid-cols-2 gap-4 h-full">
+            <div class="flex">
+              <img ngSrc="about-1.webp" alt="About Image 1" class="w-full h-full object-cover rounded-lg shadow-md" width="200" height="400">
+            </div>
+            <div class="flex">
+              <img ngSrc="about-2.webp" alt="About Image 2" class="w-full h-full object-cover rounded-lg shadow-md" width="200" height="400">
+            </div>
+          </div>
+        </div>
+        <!-- Sección de Texto -->
+        <div class="lg:w-1/2 flex flex-col justify-between">
+          <div>
+            <p class="uppercase text-primary font-semibold mb-2">Sobre Nosotros</p>
+            <h1 class="text-4xl font-bold mb-4">Somos referentes en el mercado industrial</h1>
+            <p class="mb-6">
+              Nuestro compromiso es claro: crecer, innovar y ofrecer a nuestros clientes la más alta calidad y un servicio integral, manteniendo siempre la excelencia que nos caracteriza desde nuestros inicios en las siguientes áreas.
+            </p>
+          </div>
+          <div class="flex items-center mb-6 gap-4">
+            <div class="bg-primary text-gray-900 p-6 rounded-lg text-center bg-[#FEC906]">
+              <h1 class="text-5xl font-bold">{{ experienceYears }}</h1>
+              <div class="text-sm">Años de<br>Experiencia</div>
+            </div>
+            <div class="space-y-2">
+              <div *ngFor="let service of services" class="flex items-center gap-2">
+                <mat-icon class="text-primary">check</mat-icon>
+                <span class="text-base">{{ service }}</span>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="flex items-center gap-3 bg-primary p-3 rounded-lg text-gray-900">
+              <mat-icon>mail_outline</mat-icon>
+              <div>
+                <p class="text-sm">Email us</p>
+                <h5 class="font-semibold">{{ contactEmail }}</h5>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 bg-primary p-3 rounded-lg text-gray-900">
+              <mat-icon>phone</mat-icon>
+              <div>
+                <p class="text-sm">Call us</p>
+                <h5 class="font-semibold">{{ contactPhone }}</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About End -->
