@@ -1,7 +1,7 @@
 import { NgFor, NgOptimizedImage } from '@angular/common';
 import { Component, Inject, OnDestroy } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
-import { MatDialog, MatDialogContent, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
