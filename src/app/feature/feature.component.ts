@@ -1,7 +1,7 @@
 import { NgFor, NgOptimizedImage } from '@angular/common';
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, OnDestroy } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
-import { MatDialog, MatDialogContent, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatDialog, MatDialogContent, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
@@ -10,8 +10,9 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
   templateUrl: './feature.component.html',
   styleUrl: './feature.component.scss'
 })
-export class FeatureComponent {
+export class FeatureComponent implements OnDestroy{
   videoUrl: SafeResourceUrl | null = null;
+  private dialogRef: MatDialogRef<VideoDialogComponent> | null = null; // Almacena la referencia del modal
   reasons = [
     { icon: 'check_circle', title: 'Profesionales experimentados', description: 'Personal altamente capacitado con años de experiencia en la industria química.' },
     { icon: 'check_circle', title: 'Servicios industriales confiables', description: 'Servicios confiables para diversas industrias, garantizando calidad y seguridad.' },
@@ -27,6 +28,12 @@ export class FeatureComponent {
       data: { videoUrl: this.videoUrl }
     });
   }
+
+  ngOnDestroy(): void {
+    if (this.dialogRef) {
+      this.dialogRef.close(); // ✅ Cierra el modal si sigue abierto al cambiar de página
+    }
+  } 
 }
 
 
@@ -44,10 +51,15 @@ export class FeatureComponent {
       </iframe>
     </div>
     <div mat-dialog-actions class="flex justify-end">
-      <button mat-button mat-dialog-close>Cerrar</button>
+      <button mat-button (click)="closeDialog()">Cerrar</button> <!-- ✅ Asegurar que cierre -->
     </div>
   `
 })
 export class VideoDialogComponent {
-  constructor(@Inject(MAT_DIALOG_DATA) public data: { videoUrl: SafeResourceUrl }) {} // ✅ Ahora sí reconoce Inject
+  constructor(
+    private dialogRef: MatDialogRef<VideoDialogComponent>, // ✅ Referencia al modal
+    @Inject(MAT_DIALOG_DATA) public data: { videoUrl: SafeResourceUrl }) {} // ✅ Ahora sí reconoce Inject
+  closeDialog() {
+    this.dialogRef.close(); // ✅ Cierra el modal manualmente
+  }
 }
