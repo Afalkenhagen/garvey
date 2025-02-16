@@ -6,6 +6,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-feature',
+  standalone: true,
   imports: [NgFor, MatIconModule, NgOptimizedImage],
   templateUrl: './feature.component.html',
   styleUrl: './feature.component.scss'
@@ -23,7 +24,7 @@ export class FeatureComponent implements OnDestroy{
 
   openVideoDialog(videoUrl: string): void {
     this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(videoUrl);
-    this.dialog.open(VideoDialogComponent, {
+    this.dialogRef = this.dialog.open(VideoDialogComponent, { // ✅ Guardamos la referencia
       width: '800px',
       data: { videoUrl: this.videoUrl }
     });
