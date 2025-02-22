@@ -1,17 +1,19 @@
-.bg-cover {
+section {
+  .bg-cover {
     background-size: cover;
   }
-  
+
   .bg-center {
     background-position: center;
   }
-  
+
   .bg-no-repeat {
     background-repeat: no-repeat;
   }
-  
+
   .relative {
-    background-color: rgba(255, 255, 255, 0.247); /* Fondo blanco semitransparente */
+    background-color: rgba(255, 255, 255, 0.75); /* Fondo blanco semitransparente */
     padding: 1rem;
     border-radius: 0.5rem;
   }
+}
