@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-produccion',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './produccion.component.html',
   styleUrl: './produccion.component.scss'
 })

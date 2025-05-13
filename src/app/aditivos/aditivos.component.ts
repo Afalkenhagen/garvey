@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-aditivos',
-  imports: [],
+  imports: [RouterLink, RouterLinkActive],
   templateUrl: './aditivos.component.html',
   styleUrl: './aditivos.component.scss'
 })

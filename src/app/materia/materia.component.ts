@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-materia',
-  imports: [],
+  imports: [RouterLink, RouterLinkActive],
   templateUrl: './materia.component.html',
   styleUrl: './materia.component.scss'
 })
