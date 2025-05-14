@@ -1,4 +1,5 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { NgIf } from '@angular/common';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { Router, NavigationStart, NavigationEnd, NavigationCancel, NavigationError } from '@angular/router';
@@ -42,7 +43,7 @@ export class AppComponent {
   isLoading = false;
   private firstLoad = true; // Nueva variable para detectar la primera carga
 
-  constructor(private router: Router) {
+  constructor(private router: Router, @Inject(PLATFORM_ID) private platformId: Object) {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationStart) {
         // Si es la primera carga y estamos en la página de inicio, no mostrar el Loader
@@ -56,6 +57,11 @@ export class AppComponent {
       if (event instanceof NavigationEnd || event instanceof NavigationCancel || event instanceof NavigationError) {
         this.firstLoad = false; // Marcar que ya no es la primera carga
         setTimeout(() => this.isLoading = false, 500);
+      }
+    });
+  this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd && isPlatformBrowser(this.platformId)) {
+        window.scrollTo(0, 0); // Desplaza la página al inicio solo si está en el navegador
       }
     });
   }
