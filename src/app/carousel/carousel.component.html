@@ -3,13 +3,28 @@
     <div class="flex transition-transform duration-500" [ngStyle]="{'transform': 'translateX(-' + (currentSlide * 100) + '%)'}">
       <div *ngFor="let slide of slides" class="min-w-full relative">
         <img class="w-full" [ngSrc]="slide.image" alt="Image" width="400" height="200" priority>
-        <div class="absolute inset-0 flex items-center justify-center">
-          <div class="text-center text-black p-2 bg-opacity-50">
-            <p class="text-xl font-medium text-primary uppercase mb-4" [ngClass]="{'fade-in': fadeIn, 'fade-out': !fadeIn}">{{ slide.caption }}</p>
-            <h1 class="text-custom leading-custom font-bold mb-12" [ngClass]="{'fade-in': fadeIn, 'fade-out': !fadeIn}">{{ slide.title }}</h1>
-            <a routerLink="/nosotros" routerLinkActive="active" ariaCurrentWhenActive="page" class="bg-[#2E3191] text-white py-3 px-5 rounded ">Quiero saber más</a>
-          </div>
-        </div>
+<div class="absolute inset-0 flex items-center justify-center">
+  <div class="text-center text-black p-2 bg-opacity-50">
+    <p
+  class="text-xl font-medium text-primary uppercase mb-4"
+  *ngIf="fadeIn"
+  @slideText
+>
+  {{ slide.caption }}
+</p>
+<h1
+  class="text-custom leading-custom font-bold mb-12"
+  *ngIf="fadeIn"
+  @slideText
+>
+  {{ slide.title }}
+</h1>
+    <a routerLink="/nosotros" routerLinkActive="active" ariaCurrentWhenActive="page"
+      class="bg-[#2E3191] text-white py-3 px-5 rounded hover:bg-blue-500 hover:bg-opacity-50 hover:text-black focus:outline-none transition duration-500">
+      Quiero saber más
+    </a>
+  </div>
+</div>
       </div>
     </div>
     <button (click)="prevSlide()" class="absolute top-1/2 left-5 transform -translate-y-1/2 bg-[#2E3191] text-white p-4 rounded-full opacity-50 md:opacity-100 hover:opacity-75 transition-opacity duration-300 z-10">

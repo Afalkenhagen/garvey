@@ -17,19 +17,19 @@
 
     <!-- Menú de escritorio -->
     <div class="hidden md:flex space-x-4">
-      <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page" class="text-white hover:bg-blue-700 px-3 py-2 rounded">Inicio</a>
-      <a routerLink="/nosotros" routerLinkActive="active" ariaCurrentWhenActive="page" class="text-white hover:bg-blue-700 px-3 py-2 rounded">Nosotros</a>
-      <a routerLink="/productos" routerLinkActive="active" ariaCurrentWhenActive="page" class="text-white hover:bg-blue-700 px-3 py-2 rounded">Productos</a>
-      <a routerLink="/contacto" routerLinkActive="active" ariaCurrentWhenActive="page" class="text-white hover:bg-blue-700 px-3 py-2 rounded">Contacto</a>
+      <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page" class="text-white hover:bg-blue-700 px-3 py-2 rounded transition duration-500">Inicio</a>
+      <a routerLink="/nosotros" routerLinkActive="active" ariaCurrentWhenActive="page" class="text-white hover:bg-blue-700 px-3 py-2 rounded transition duration-500">Nosotros</a>
+      <a routerLink="/productos" routerLinkActive="active" ariaCurrentWhenActive="page" class="text-white hover:bg-blue-700 px-3 py-2 rounded transition duration-500">Productos</a>
+      <a routerLink="/contacto" routerLinkActive="active" ariaCurrentWhenActive="page" class="text-white hover:bg-blue-700 px-3 py-2 rounded transition duration-500">Contacto</a>
     </div>
   </div>
 
   <!-- Menú desplegable en móvil -->
   <div *ngIf="isMenuOpen" class="md:hidden mt-4 space-y-2 transition-all duration-500 ease-in-out mobile-menu">
-    <a routerLink="/" class="block text-white hover:bg-blue-700 px-3 py-2 rounded w-full text-center">Inicio</a>
-    <a routerLink="/nosotros" class="block text-white hover:bg-blue-700 px-3 py-2 rounded w-full text-center">Nosotros</a>
-    <a routerLink="/productos" class="block text-white hover:bg-blue-700 px-3 py-2 rounded w-full text-center">Productos</a>
-    <a routerLink="/contacto" class="block text-white hover:bg-blue-700 px-3 py-2 rounded w-full text-center">Contacto</a>
+    <a routerLink="/" class="block text-white hover:bg-blue-700 px-3 py-2 rounded w-full text-center transition duration-500">Inicio</a>
+    <a routerLink="/nosotros" class="block text-white hover:bg-blue-700 px-3 py-2 rounded w-full text-center transition duration-500">Nosotros</a>
+    <a routerLink="/productos" class="block text-white hover:bg-blue-700 px-3 py-2 rounded w-full text-center transition duration-500">Productos</a>
+    <a routerLink="/contacto" class="block text-white hover:bg-blue-700 px-3 py-2 rounded w-full text-center transition duration-500">Contacto</a>
   </div>
 </nav>
 <!-- Fin navbar -->

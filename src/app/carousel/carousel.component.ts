@@ -3,12 +3,24 @@ import { CommonModule } from '@angular/common';
 import { isPlatformBrowser } from '@angular/common';
 import { NgOptimizedImage } from '@angular/common'
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-carousel',
   imports: [CommonModule,NgOptimizedImage, RouterLink, RouterLinkActive],
   templateUrl: './carousel.component.html',
-  styleUrl: './carousel.component.scss'
+  styleUrl: './carousel.component.scss',
+  animations: [
+    trigger('slideText', [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'translateY(-40px)' }),
+        animate('600ms cubic-bezier(0.23, 1, 0.32, 1)', style({ opacity: 1, transform: 'translateY(0)' }))
+      ]),
+      transition(':leave', [
+        animate('300ms ease', style({ opacity: 0, transform: 'translateY(40px)' }))
+      ])
+    ])
+  ]
 })
 export class CarouselComponent implements OnInit, OnDestroy{
   slides = [
