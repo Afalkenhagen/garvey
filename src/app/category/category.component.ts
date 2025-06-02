@@ -1,12 +1,14 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
+import { fadeInAnimation } from '../animations/animations';
 
 @Component({
   selector: 'app-category',
   imports: [NgFor, MatIconModule],
   templateUrl: './category.component.html',
-  styleUrl: './category.component.scss'
+  styleUrl: './category.component.scss',
+  animations: [fadeInAnimation] // Add the animation here
 })
 export class CategoryComponent {
   categorias = [
