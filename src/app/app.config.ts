@@ -7,6 +7,7 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ObserveVisibilityDirective } from '../directives/observe-visibility.directive';
 
 
 export const appConfig: ApplicationConfig = {
@@ -17,6 +18,7 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(withFetch()), 
     provideAnimationsAsync(),
     provideAnimations(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ObserveVisibilityDirective
   ]
 };

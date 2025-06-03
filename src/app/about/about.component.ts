@@ -1,10 +1,11 @@
 import { NgFor, NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
+import { ObserveVisibilityDirective } from '../../directives/observe-visibility.directive';
 
 @Component({
   selector: 'app-about',
-  imports: [NgFor, NgOptimizedImage, MatIconModule],
+  imports: [NgFor, NgOptimizedImage, MatIconModule, ObserveVisibilityDirective],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'
 })
