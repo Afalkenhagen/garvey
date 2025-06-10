@@ -1,7 +1,11 @@
 <div class="py-4 bg-blue-400"></div>
 <app-carousel></app-carousel>
 <noscript>This is the home component</noscript>
-<app-hero></app-hero>
+@defer (on viewport) {
+  <app-hero/>
+} @placeholder {
+  <p>cargando...</p>
+}
 <app-about></app-about>
 <app-facts></app-facts>
 <app-feature></app-feature>
