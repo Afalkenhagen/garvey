@@ -3,11 +3,12 @@ import { Component, Inject, OnDestroy } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { ObserveVisibilityDirective } from '../../directives/observe-visibility.directive';
 
 @Component({
   selector: 'app-feature',
   standalone: true,
-  imports: [NgFor, MatIconModule, NgOptimizedImage],
+  imports: [NgFor, MatIconModule, NgOptimizedImage, ObserveVisibilityDirective],
   templateUrl: './feature.component.html',
   styleUrl: './feature.component.scss'
 })

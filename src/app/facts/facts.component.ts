@@ -2,10 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component, ElementRef, AfterViewInit, ViewChildren, QueryList, PLATFORM_ID, Inject} from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
+import { ObserveVisibilityDirective } from '../../directives/observe-visibility.directive';
 
 @Component({
   selector: 'app-facts',
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule, MatIconModule, ObserveVisibilityDirective],
   templateUrl: './facts.component.html',
   styleUrl: './facts.component.scss'
 })

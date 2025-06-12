@@ -6,6 +6,7 @@ import { FactsComponent } from '../facts/facts.component';
 import { AboutComponent } from '../about/about.component';
 import { FeatureComponent } from "../feature/feature.component";
 
+
 @Component({
   selector: 'app-home',
   imports: [CommonModule, CarouselComponent, HeroComponent, FactsComponent, AboutComponent, FeatureComponent],

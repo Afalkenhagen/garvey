@@ -18,6 +18,6 @@ export class HeroComponent {
     // Simula una condición para mostrar el contenido después de un tiempo
     setTimeout(() => {
       this.isDisplayed = true;
-    }, 500); // Muestra el contenido después de 0.5 segundos
+    }, 800); // Muestra el contenido después de 1 segundos
   }
 }
