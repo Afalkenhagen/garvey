@@ -11,7 +11,17 @@ module.exports = {
       lineHeight: {
         'custom': '4.5rem', // Define una altura de línea personalizada
       },
-    },
+      colors: {
+        garvey: {
+          azul: '#2E3191',
+          amarillo: '#FEC906',
+        },
+        neutral: {
+          oscuro: '#333333',
+          claro: '#F5F5F5',
+        },
+      },
+    }
   },
   plugins: [
     // require('tailwindcss-animated'),

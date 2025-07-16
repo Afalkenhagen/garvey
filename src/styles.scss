@@ -3,8 +3,13 @@
 @use 'tailwindcss/utilities';
 @use 'normalize.scss/normalize';
 
+@view-transition {
+    navigation: auto;
+}
 
-
+::view-transition-group(*){
+    animation-duration: 3s;
+}
 
 body {
     scroll-behavior: smooth;
