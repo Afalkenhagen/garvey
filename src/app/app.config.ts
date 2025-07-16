@@ -14,11 +14,11 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }), 
     provideRouter(routes), 
-    provideClientHydration(withEventReplay()),
+    provideClientHydration(),
     provideHttpClient(withFetch()), 
-    provideAnimationsAsync(),
+    //provideAnimationsAsync(),
     provideAnimations(),
-    BrowserAnimationsModule,
+    //BrowserAnimationsModule,
     ObserveVisibilityDirective
   ]
 };

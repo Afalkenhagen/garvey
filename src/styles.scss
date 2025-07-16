@@ -3,17 +3,17 @@
 @use 'tailwindcss/utilities';
 @use 'normalize.scss/normalize';
 
-@view-transition {
-    navigation: auto;
-}
+// @view-transition {
+//     navigation: auto;
+// }
 
-::view-transition-group(*){
-    animation-duration: 3s;
-}
+// ::view-transition-group(*){
+//     animation-duration: 3s;
+// }
 
 body {
     scroll-behavior: smooth;
-    transition: 0.3s ease all;
+    //transition: 0.3s ease all;
 }
 
 html, body { height: 100%; }
