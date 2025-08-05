@@ -1,0 +1,14 @@
+{
+  "routes": {
+    "/garvey": {},
+    "/garvey/aditivos": {},
+    "/garvey/contacto": {},
+    "/garvey/footer": {},
+    "/garvey/limpieza": {},
+    "/garvey/materia": {},
+    "/garvey/nav": {},
+    "/garvey/nosotros": {},
+    "/garvey/produccion": {},
+    "/garvey/productos": {}
+  }
+}
