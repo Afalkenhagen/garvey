@@ -5,11 +5,12 @@ import { HeroComponent } from '../hero/hero.component';
 import { FactsComponent } from '../facts/facts.component';
 import { AboutComponent } from '../about/about.component';
 import { FeatureComponent } from "../feature/feature.component";
+import { SwcarouselComponent } from '../swcarousel/swcarousel.component';
 
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, CarouselComponent, HeroComponent, FactsComponent, AboutComponent, FeatureComponent],
+  imports: [CommonModule, HeroComponent, FactsComponent, AboutComponent, FeatureComponent, SwcarouselComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
