@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule, MatDialogModule],
   template: `
-    <div class="w-full h-full flex justify-center items-center p-4">
+    <div class="w-full h-full flex justify-center items-center p-4 bg-garvey-azul">
       <iframe
         [src]="safeUrl"
         width="560"
@@ -18,7 +18,7 @@ import { CommonModule } from '@angular/common';
         class="rounded-lg shadow-lg w-full max-w-3xl aspect-video">
       </iframe>
     </div>
-    <div class="flex justify-end p-4">
+    <div class="flex justify-end p-4 bg-garvey-azul">
       <button mat-button mat-dialog-close>Cerrar</button>
     </div>
   `
