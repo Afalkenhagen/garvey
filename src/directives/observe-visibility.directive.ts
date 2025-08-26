@@ -19,7 +19,7 @@ export class ObserveVisibilityDirective implements OnDestroy, OnInit, AfterViewI
   // animation easing
   @Input() easing: '' | 'ease' | 'ease-in' | 'ease-out' | 'ease-in-out' = '';
   // what percentage should be visible before triggering
-  @Input() threshold: number = 0.6;
+  @Input() threshold: number = 0.4;
   // root margin
   @Input() rootMargin: string = '0px';
 
@@ -111,35 +111,3 @@ export class ObserveVisibilityDirective implements OnDestroy, OnInit, AfterViewI
     this._intersect$.complete();
   }
 }
-
-
-
-
-// import { Directive, ElementRef, EventEmitter, Output, Inject, PLATFORM_ID, OnDestroy } from '@angular/core';
-// import { isPlatformBrowser } from '@angular/common';
-
-// @Directive({
-//   selector: '[observeVisibility]'
-// })
-// export class ObserveVisibilityDirective implements OnDestroy {
-//   @Output() visible = new EventEmitter<boolean>();
-//   private observer?: IntersectionObserver;
-
-//   constructor(
-//     private el: ElementRef,
-//     @Inject(PLATFORM_ID) private platformId: Object
-//   ) {
-//     if (isPlatformBrowser(this.platformId) && typeof IntersectionObserver !== 'undefined') {
-//       this.observer = new IntersectionObserver(([entry]) => {
-//         this.visible.emit(entry.isIntersecting);
-//       }, { threshold: 0.1 });
-//       this.observer.observe(this.el.nativeElement);
-//     }
-//   }
-
-//   ngOnDestroy() {
-//     if (this.observer) {
-//       this.observer.disconnect();
-//     }
-//   }
-// }
