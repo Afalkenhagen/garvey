@@ -1,11 +1,21 @@
 <div class="py-6 bg-garvey-azul"></div>
-<!-- <app-carousel></app-carousel> -->
 <app-swcarousel></app-swcarousel>
-@defer (on viewport) {
+<!-- @defer (on viewport) {
   <app-hero/>
 } @placeholder {
   <p>cargando...</p>
-}
+} -->
+<app-hero observeVisibility></app-hero>
+<!-- Banner Instagram -->
+<div class="w-full flex justify-center items-center pt-8 pb-4" observeVisibility>
+<a href="https://www.instagram.com/quimicagarvey/" target="_blank" rel="noopener noreferrer" aria-label="Ir a Instagram">
+    <img
+      src="instagram.webp"
+      alt="Seguinos en Instagram"
+      class="w-full max-w-2xl h-[200px] rounded-lg shadow-lg object-cover cursor-pointer"
+    />
+  </a>
+</div>
 <app-about></app-about>
 <app-facts></app-facts>
 <app-feature></app-feature>
